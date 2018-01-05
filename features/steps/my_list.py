@@ -7,18 +7,8 @@ def see_title_mentions(context,expected_title):
     title = context.browser.title
     context.test.assertIn(expected_title,title)
 
-@then(u'I will see the page header mentions "To-Do"')
-def step_impl(context):
-    raise NotImplementedError(u'STEP: Then I will see the page header mentions "To-Do"')
+@then(u'I will see the page header mentions "{expected_header}"')
+def see_header_mentions(context,expected_header):
+    header = context.browser.find_element_by_tag_name('h1')
+    context.text.assertIn(expected_header,header)
 
-@then(u'I am invited to enter a to-do item straight away')
-def step_impl(context):
-    raise NotImplementedError(u'STEP: Then I am invited to enter a to-do item straight away')
-
-@when(u'I type "Buy peacock feathers" into a text box and press enter')
-def step_impl(context):
-    raise NotImplementedError(u'STEP: When I type "Buy peacock feathers" into a text box and press enter')
-
-@then(u'I will see the page updates and now lists "1:Buy peacock feathers"')
-def step_impl(context):
-    raise NotImplementedError(u'STEP: Then I will see the page updates and now lists "1:Buy peacock feathers"')
