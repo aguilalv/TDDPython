@@ -32,7 +32,12 @@ def type_text_and_press_enter(context,text_input):
 def see_item_in_table(context,expected_item):
     table = context.browser.find_element_by_id('id_list_table')
     rows = table.find_elements_by_tag_name('tr')
-    context.test.assertTrue(
-        any(row.text == '1: '+expected_list_element for row in rows)
-    )
+    context.test.assertIn(expected_item,[row.text for row in rows])
+
+@given(u'I have typed "{text_input}" into a text box and press enter')
+def typed_text_input(context,text_input):
+    inputbox = context.browser.find_element_by_id('id_new_item')
+    inputbox.send_keys(text_input)
+    inputbox.send_keys(Keys.ENTER)
+    time.sleep(1)
 
