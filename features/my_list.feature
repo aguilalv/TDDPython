@@ -13,8 +13,8 @@ Feature: My list
  
         Given I have typed "Buy peacock feathers" into a text box and press enter
         When I type "Use peacock feathers to make a fly" into a text box and press enter
-        Then I will see the row lists "1:Buy peacock feathers" item in a table
-        And I will see the row lists "2:Use peacock feathers to make a fly" item in a table
+        Then I will see the row lists "1: Buy peacock feathers" item in a table
+        And I will see the row lists "2: Use peacock feathers to make a fly" item in a table
         
         # that the site has generated a unique URL for her -- there is some
         # explanatory text to that effect.
