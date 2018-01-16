@@ -1,3 +1,7 @@
+#sqlite datbase
+db.sqlite3
+
+
 # Personal todos.txt file
 todos.txt
 
@@ -103,4 +107,3 @@ ENV/
 # mypy
 .mypy_cache/
 virtualenv
-db.sqlite3
