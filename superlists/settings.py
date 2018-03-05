@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'behave_django',
     'coverage',
     'lists',
+    'accounts',
 ]
 
 MIDDLEWARE = [
@@ -140,3 +141,6 @@ LOGGING = {
     },
     'root': {'level': 'INFO'},
 }
+
+# Django authorization
+AUTH_USER_MODEL = 'accounts.User'
